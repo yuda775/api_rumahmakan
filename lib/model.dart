@@ -1,20 +1,20 @@
 class Pesanan {
-  final int id;
-  final int sandwich;
-  final int burger;
-  final int frenchFriesh;
-  final int friedChicken;
-  final int cocaCola;
-  final int greenTea;
-  final int orangeJuice;
-  final int hargaSandwich;
-  final int hargaBurger;
-  final int hargaFrenchFriesh;
-  final int hargaFriedChicken;
-  final int hargaCocaCola;
-  final int hargaGreenTea;
-  final int hargaOrangeJuice;
-  final int total;
+  final dynamic id;
+  final dynamic sandwich;
+  final dynamic burger;
+  final dynamic frenchFriesh;
+  final dynamic friedChicken;
+  final dynamic cocaCola;
+  final dynamic greenTea;
+  final dynamic orangeJuice;
+  final dynamic hargaSandwich;
+  final dynamic hargaBurger;
+  final dynamic hargaFrenchFriesh;
+  final dynamic hargaFriedChicken;
+  final dynamic hargaCocaCola;
+  final dynamic hargaGreenTea;
+  final dynamic hargaOrangeJuice;
+  final dynamic total;
 
   const Pesanan({
     required this.id,

@@ -22,4 +22,47 @@ class Repository {
       print(e.toString());
     }
   }
+
+  Future postData(Pesanan pesanan) async {
+    try {
+      final response = await http.post(Uri.parse(_baseUrl), body: {
+        'id': pesanan.id,
+        'sandwich': pesanan.sandwich,
+        'burger': pesanan.burger,
+        'frenchFriesh': pesanan.frenchFriesh,
+        'friedChicken': pesanan.friedChicken,
+        'cocaCola': pesanan.cocaCola,
+        'greenTea': pesanan.greenTea,
+        'orangeJuice': pesanan.orangeJuice,
+        'hargaSandwich': pesanan.hargaSandwich,
+        'hargaBurger': pesanan.hargaBurger,
+        'hargaFrenchFriesh': pesanan.hargaFrenchFriesh,
+        'hargaFriedChicken': pesanan.hargaFriedChicken,
+        'hargaCocaCola': pesanan.hargaCocaCola,
+        'hargaGreenTea': pesanan.hargaGreenTea,
+        'hargaOrangeJuice': pesanan.hargaOrangeJuice,
+        'total': pesanan.total
+      });
+      if (response.statusCode == 201) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      print(e.toString());
+    }
+  }
+
+  Future deleteData(String id) async {
+    try {
+      final response = await http.delete(Uri.parse('$_baseUrl/$id'));
+      if (response.statusCode == 200) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      print(e.toString());
+    }
+  }
 }
